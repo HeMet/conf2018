@@ -7,19 +7,35 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var buttonBottomPadding: NSLayoutConstraint!
+
+    let disposeBag = DisposeBag()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        kbHeight
+            .map { $0 + 20 }
+            .bind(to: buttonBottomPadding.rx.constant)
+            .disposed(by: disposeBag)
+
+        button.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.textField.resignFirstResponder()
+            })
+            .disposed(by: disposeBag)
+
+        textField.rx.text
+            .asObservable()
+            .throttle(1, scheduler: MainScheduler.asyncInstance)
+            .bind(to: button.rx.title(for: .normal))
+            .disposed(by: disposeBag)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

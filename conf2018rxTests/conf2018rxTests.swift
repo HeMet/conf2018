@@ -20,17 +20,28 @@ class conf2018rxTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+
+    func testOldMicrosoftConference() {
+        let exp = expectation(description: "Famous speech")
+        steveBalmer { optSpeech, optError in
+
+            if optSpeech == "Developers! Developers! Developers!" {
+                exp.fulfill()
+            }
         }
+
+        wait(for: [exp], timeout: 0.5)
     }
-    
+
+    func testRxOldMicrosoftConference() {
+        let exp = expectation(description: "Famous speech")
+        _ = rxSteveBalmer
+            .subscribe(onNext: { speech in
+                if speech == "Developers! Developers! Developers!" {
+                    exp.fulfill()
+                }
+            })
+
+        wait(for: [exp], timeout: 0.5)
+    }
 }

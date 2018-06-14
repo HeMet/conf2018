@@ -113,7 +113,7 @@ struct FifteenPuzzle {
     }
 }
 
-let cheers = [
+private let cheers = [
     "Давай!",
     "У тебя все получится!",
     "Powered by RxFeedback"

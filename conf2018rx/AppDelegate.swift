@@ -54,6 +54,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         win.makeKeyAndVisible()
 
+//        syncClock
+//            .debug("syncClock")
+//            .subscribe()
+//            .disposed(by: disposeBag)
+
+//        asyncClock
+//            .debug("asyncClock")
+//            .subscribe()
+//            .disposed(by: disposeBag)
+
+        clockWithSideEffects()
+            .debug("clockWithSideEffects")
+            .subscribe()
+            .disposed(by: disposeBag)
+
         return true
     }
 }

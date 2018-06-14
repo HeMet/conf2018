@@ -19,6 +19,7 @@
 		84C5CE8320CEE30F00F274A4 /* UIFifteenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5CE8220CEE30F00F274A4 /* UIFifteenCollectionViewCell.swift */; };
 		84C5CE8520CEE3A600F274A4 /* FifteenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5CE8420CEE3A600F274A4 /* FifteenViewController.swift */; };
 		84C5CE8720CEEDFB00F274A4 /* FifteenPuzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5CE8620CEEDFA00F274A4 /* FifteenPuzzle.swift */; };
+		84C5CE8A20D2D71500F274A4 /* Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5CE8920D2D71500F274A4 /* Reduce.swift */; };
 		BF2BF8C9C1DB64E332D5FCDB /* Pods_conf2018rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A3D84A0B7CB351D469AED0 /* Pods_conf2018rx.framework */; };
 		E11133B4784C4C7341F17164 /* Pods_conf2018rx_conf2018rxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41CCD57641A89C8CABB262EF /* Pods_conf2018rx_conf2018rxTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		84C5CE8220CEE30F00F274A4 /* UIFifteenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFifteenCollectionViewCell.swift; sourceTree = "<group>"; };
 		84C5CE8420CEE3A600F274A4 /* FifteenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifteenViewController.swift; sourceTree = "<group>"; };
 		84C5CE8620CEEDFA00F274A4 /* FifteenPuzzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifteenPuzzle.swift; sourceTree = "<group>"; };
+		84C5CE8920D2D71500F274A4 /* Reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reduce.swift; sourceTree = "<group>"; };
 		93A3D84A0B7CB351D469AED0 /* Pods_conf2018rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_conf2018rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BEAAB7C746A787617E817E /* Pods-conf2018rx-conf2018rxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conf2018rx-conf2018rxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-conf2018rx-conf2018rxTests/Pods-conf2018rx-conf2018rxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA69F0520FFC820F7DA79B6E /* Pods-conf2018rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conf2018rx.release.xcconfig"; path = "Pods/Target Support Files/Pods-conf2018rx/Pods-conf2018rx.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		84C5CE5820CE8F1C00F274A4 /* conf2018rx */ = {
 			isa = PBXGroup;
 			children = (
+				84C5CE8820D2D6C200F274A4 /* Reduce */,
 				84C5CE8120CEE1A500F274A4 /* FifteenPuzzle */,
 				84C5CE7920CE916100F274A4 /* AsyncComputation */,
 				84C5CE7E20CE9EE800F274A4 /* Notifications */,
@@ -148,6 +151,14 @@
 				84C5CE8620CEEDFA00F274A4 /* FifteenPuzzle.swift */,
 			);
 			path = FifteenPuzzle;
+			sourceTree = "<group>";
+		};
+		84C5CE8820D2D6C200F274A4 /* Reduce */ = {
+			isa = PBXGroup;
+			children = (
+				84C5CE8920D2D71500F274A4 /* Reduce.swift */,
+			);
+			path = Reduce;
 			sourceTree = "<group>";
 		};
 		AEDC9E43AC03219DEDB62326 /* Frameworks */ = {
@@ -404,6 +415,7 @@
 				84C5CE5C20CE8F1C00F274A4 /* ViewController.swift in Sources */,
 				84C5CE5A20CE8F1C00F274A4 /* AppDelegate.swift in Sources */,
 				84C5CE7D20CE99ED00F274A4 /* ObservablesAC.swift in Sources */,
+				84C5CE8A20D2D71500F274A4 /* Reduce.swift in Sources */,
 				84C5CE8020CE9F4000F274A4 /* RxKeyboard.swift in Sources */,
 				84C5CE8320CEE30F00F274A4 /* UIFifteenCollectionViewCell.swift in Sources */,
 				84C5CE7B20CE91E400F274A4 /* Callbacks.swift in Sources */,
